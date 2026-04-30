@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Props = {
     title: string;
@@ -10,6 +10,18 @@ type Props = {
 export default function AppFooter({ title, isShowDate = false }: Props) {
     // let companyName = 'CodingThailand';
     const [companyName, setCompanyName] = useState('CodingThailand');
+
+    useEffect(() => {
+        console.log('use effect 1 จะทำงานครั้งแรก และทุกครั้งที่มีการอัปเดตค่า state');
+    });
+
+    useEffect(() => {
+        console.log('use effect 2 จะทำงานแค่ครั้งแรกครั้งเดียวเท่านั้น');
+    }, []);
+
+    useEffect(() => {
+        console.log('use effect 3 จะทำงานครั้งแรก และเฉพาะครั้งที่มีการอัปเดตค่า state ที่ส่งเข้ามา');
+    }, [companyName]);
 
     const handleMouseOver = () => {
         // companyName = 'Facebook';
