@@ -1,9 +1,10 @@
 'use client';
 
-type Product = {
+export type Product = {
     id: number;
     name: string;
     price: number;
+    stock: number;
 }
 
 type ProductListProp = {
@@ -20,6 +21,7 @@ export default function ProductList({ products }: ProductListProp) {
                     <div key={product.id}>
                         <h2>{product.name} - {product.id}</h2>
                         <p>ราคา: {product.price} บาท</p>
+                        <p>stock: {product.stock}</p>
                         <button onClick={
                             () => {
                                 alert(`คุณได้เลือกซื้อ ${product.name}`);
