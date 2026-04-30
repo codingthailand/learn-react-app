@@ -6,7 +6,7 @@ export default function About() {
         <div>
             <h1 className="app-hero">About Page</h1>
             <UserProfile />
-            <p>This is the about page of our application.</p>
+            <p className="text-orange-600 text-3xl">This is the about page of our application.</p>
             <hr />
             <AppFooter title="About" isShowDate={true} />
         </div>
