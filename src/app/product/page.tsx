@@ -1,6 +1,5 @@
-'use client';
-
 import AppFooter from "@/components/app-footer";
+import ProductList from "@/components/product-list";
 
 export default function Product() {
     const products = [
@@ -11,22 +10,7 @@ export default function Product() {
 
     return (
         <div>
-            <h1>สินค้าทั้งหมด {products.length} รายการ</h1>
-            <hr />
-            {
-                products.map((product) => (
-                    <div key={product.id}>
-                        <h2>{product.name} - {product.id}</h2>
-                        <p>ราคา: {product.price} บาท</p>
-                        <button onClick={
-                            () => {
-                                alert(`คุณได้เลือกซื้อ ${product.name}`);
-                            }
-                        }>ซื้อสินค้า</button>
-                        <hr />
-                    </div>
-                ))
-            }
+            <ProductList products={products} />
             <hr />
             <AppFooter title="Product" />
         </div>
