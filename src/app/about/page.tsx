@@ -1,3 +1,4 @@
+import AppFooter from "@/components/app-footer";
 import UserProfile from "@/components/user-profile"
 
 export default function About() {
@@ -6,6 +7,8 @@ export default function About() {
             <h1>About Page</h1>
             <UserProfile />
             <p>This is the about page of our application.</p>
+            <hr />
+            <AppFooter title="About" isShowDate={true} />
         </div>
     );
 }
