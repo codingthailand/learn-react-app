@@ -4,7 +4,7 @@ export type Product = {
     id: number;
     name: string;
     price: number;
-    stock: number;
+    stock?: number;
 }
 
 type ProductListProp = {
